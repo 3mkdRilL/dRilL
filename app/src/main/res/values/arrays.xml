@@ -128,7 +128,7 @@
     </string-array>
 
     <string-array name="sponsorblock_settings_default">
-        <item>music_offtopic</item>
+        <item>sponsor</item> / <item>selfpromo</item> / <item>interaction</item>
     </string-array>
 
 
