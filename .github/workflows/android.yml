@@ -35,4 +35,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: drill-apk
-          path: ${{ env.main_project_module }}/build/outputs/apk/github/debug/
+          path: ${{ env.main_project_module }}/build/outputs/apk/github/debug/*arm64-8va*.apk
