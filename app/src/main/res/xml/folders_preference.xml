@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <Preference
-        android:defaultValue=""
+        android:defaultValue="/storage/emulated/0/Music"
         app:icon="@drawable/ic_music_downloaded"
         app:key="music_path"
         app:title="@string/music_directory" />
 
     <Preference
-        android:defaultValue=""
+        android:defaultValue="/storage/emulated/0/DCIM/myVideo"
         app:icon="@drawable/ic_video_downloaded"
         app:key="video_path"
         app:title="@string/video_directory" />
