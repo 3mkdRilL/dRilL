@@ -144,7 +144,7 @@
             app:title="@string/prefer_container_over_codec_audio" />
 
         <ListPreference
-            android:defaultValue=""
+            android:defaultValue="m4a"
             android:entries="@array/audio_containers"
             android:entryValues="@array/audio_containers_values"
             android:icon="@drawable/ic_code"
@@ -281,7 +281,7 @@
 
 
         <ListPreference
-            android:defaultValue=""
+            android:defaultValue="avc|h264"
             android:entries="@array/video_codec"
             android:entryValues="@array/video_codec_values"
             android:icon="@drawable/ic_code"
@@ -292,7 +292,7 @@
 
 
         <ListPreference
-            android:defaultValue="best"
+            android:defaultValue="1080p_ytdlnisgeneric"
             android:entries="@array/video_formats"
             android:entryValues="@array/video_formats_values"
             android:icon="@drawable/ic_video"
