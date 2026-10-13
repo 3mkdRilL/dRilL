@@ -32,7 +32,7 @@
             android:entries="@array/accents"
             android:entryValues="@array/accents_values"
             android:icon="@drawable/baseline_color_lens_24"
-            app:defaultValue="blue"
+            app:defaultValue="red"
             app:key="theme_accent"
             app:summary="Blue"
             app:title="@string/accents" />
