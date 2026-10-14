@@ -25,13 +25,19 @@ jobs:
           distribution: 'corretto'
           cache: 'gradle'
 
-      - name: Build dRilL APK (github flavor, release)
+      - name: dRilL Identity (all languages)
+        run: |
+          sed -i 's/YTDLnis/dRilL/g' app/src/main/res/values*/strings.xml
+          grep -rl "deniscerri/ytdlnis" app/src/main/java app/src/main/res 2>/dev/null | xargs -r sed -i 's|github.com/deniscerri/ytdlnis|github.com/3mkdRilL/dRilL|g'
+          echo "✅ dRilL identity applied to all languages"
+
+      - name: Build dRilL APK (release, arm64)
         run: |
           touch local.properties
           chmod +x gradlew
           ./gradlew assembleGithubRelease
 
-      - name: Upload dRilL APKs
+      - name: Upload dRilL APK
         uses: actions/upload-artifact@v4
         with:
           name: drill-apk
