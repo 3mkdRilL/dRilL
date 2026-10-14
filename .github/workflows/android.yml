@@ -25,11 +25,12 @@ jobs:
           distribution: 'corretto'
           cache: 'gradle'
 
-      - name: dRilL Identity (all languages)
+      - name: dRilL Identity (all languages + UI + links)
         run: |
           sed -i 's/YTDLnis/dRilL/g' app/src/main/res/values*/strings.xml
-          grep -rl "deniscerri/ytdlnis" app/src/main/java app/src/main/res 2>/dev/null | xargs -r sed -i 's|github.com/deniscerri/ytdlnis|github.com/3mkdRilL/dRilL|g'
-          echo "✅ dRilL identity applied to all languages"
+          grep -rl "YTDLnis" app/src/main/res --include="*.xml" 2>/dev/null | xargs -r sed -i 's/YTDLnis/dRilL/g'
+          grep -rl "t.me/ytdlnis\|discord.gg\|deniscerri/ytdlnis" app/src/main --include="*.kt" --include="*.java" --include="*.xml" 2>/dev/null | xargs -r sed -i 's|https://t.me/ytdlnis|https://github.com/3mkdRilL/dRilL|g; s|https://discord.gg/[A-Za-z0-9]*|https://github.com/3mkdRilL/dRilL|g; s|github.com/deniscerri/ytdlnis|github.com/3mkdRilL/dRilL|g'
+          echo "✅ dRilL identity complete"
 
       - name: Build dRilL APK (release, arm64)
         run: |
